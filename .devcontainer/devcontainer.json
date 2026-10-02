@@ -1,0 +1,17 @@
+{
+  "name": "Windows 10 (dockur, software emulation)",
+  "service": "windows",
+  "dockerComposeFile": "docker-compose.yml",
+  "forwardPorts": [8006],
+  "portsAttributes": {
+    "8006": {
+      "label": "Windows 10 web desktop",
+      "onAutoForward": "notify",
+      "protocol": "http"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  },
+  "shutdownAction": "stopCompose"
+}
